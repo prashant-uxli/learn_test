@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <title>Hello Test</title>
   </head>
-  <body>
-    <h1>Hello Test</h1>
-
+  <body ng-app="app">
+    <h1 ng-controller="HelloWorldCtrl">{{message}}</h1>
+    <script src = "https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script>
+      angular.module("app",[]).controller("HelloWorldCtrl", function($scope){
+        $scope.message = "Hello World - do something"
+      })
+    </script>
   </body>
 </html>
